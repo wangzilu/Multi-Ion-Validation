@@ -1,0 +1,10 @@
+// directory for macro cross section:
+./database/mcpro_G4.imfp
+// directory for mass stopping power ratio:
+./database/mcpro.mater
+// directory for restricted stopping power in water:
+./database/mcpro.rstpw
+// directory for PSTAR
+
+
+
