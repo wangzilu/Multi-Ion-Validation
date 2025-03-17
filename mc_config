@@ -1,3 +1,5 @@
+//multi-ion cross section:
+./database/cross_section.bin
 // directory for macro cross section:
 ./database/mcpro_G4.imfp
 // directory for mass stopping power ratio:
