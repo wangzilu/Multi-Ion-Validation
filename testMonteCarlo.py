@@ -5,6 +5,7 @@ from protonMC_CUDA import cudaProtonMonteCarlo
 beamParam         = np.load('./input/beamsparam.npy')
 beamParam[0][0]   = 100000
 beamParam[0][4:9] = 0
+beamParam[0][3]   = 100
 
 sourcePos = np.load('./input/sourcepos.npy')
 bmdir     = np.load('./input/bmdir.npy')
