@@ -5,12 +5,11 @@ from protonMC_CUDA import cudaProtonMonteCarlo
 beamParam         = np.load('./input/beamsparam.npy')
 beamParam[0][0]   = 100000
 beamParam[0][4:9] = 0
-beamParam[0][3]   = 100
+beamParam[0][3]   = 1200
 
 sourcePos = np.load('./input/sourcepos.npy')
 bmdir     = np.load('./input/bmdir.npy')
 res       = 3.0
-
 
 corner        = np.load('./input/corner.npy')
 resolution    = np.load('./input/resolution.npy')
