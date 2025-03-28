@@ -1,11 +1,14 @@
 import os
+from turtledemo.penrose import start
+
 import numpy as np
+import time
 print(os.getcwd())
 from protonMC_CUDA import cudaProtonMonteCarlo
 beamParam         = np.load('./input/beamsparam.npy')
-beamParam[0][0]   = 100000
+beamParam[0][0]   = 1000000
 beamParam[0][4:9] = 0
-beamParam[0][3]   = 1200
+beamParam[0][3]   = 4800
 
 sourcePos = np.load('./input/sourcepos.npy')
 bmdir     = np.load('./input/bmdir.npy')
@@ -36,6 +39,8 @@ finalDose   = np.zeros(dims, dtype=np.float32, order="F")
 tempSumDose = np.zeros((dims[0] * dims[1] * dims[2] * 3), dtype=np.float32)
 tempLET     = np.zeros((dims[0] * dims[1] * dims[2] * 4), dtype=np.float32)
 vSAD        = 20.0
+start = time.time()
 a = cudaProtonMonteCarlo(finalDose, tempSumDose, tempLET, './mc_config', beamParam, sourcePos, bmdir, ctdata, corner, resolution, dims, isocenter, materialComposition, HUDensity, eneProb, vSAD, 1, 10)
-
+end = time.time()
+print(end - start)
 a =1 
