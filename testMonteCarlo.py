@@ -1,12 +1,12 @@
 import os
 from turtledemo.penrose import start
-
+from matplotlib import pyplot as plt
 import numpy as np
 import time
 print(os.getcwd())
 from protonMC_CUDA import cudaProtonMonteCarlo
 beamParam         = np.load('./input/beamsparam.npy')
-beamParam[0][0]   = 1000000
+beamParam[0][0]   = 1
 beamParam[0][4:9] = 0
 beamParam[0][3]   = 4800
 
@@ -40,7 +40,12 @@ tempSumDose = np.zeros((dims[0] * dims[1] * dims[2] * 3), dtype=np.float32)
 tempLET     = np.zeros((dims[0] * dims[1] * dims[2] * 4), dtype=np.float32)
 vSAD        = 20.0
 start = time.time()
-a = cudaProtonMonteCarlo(finalDose, tempSumDose, tempLET, './mc_config', beamParam, sourcePos, bmdir, ctdata, corner, resolution, dims, isocenter, materialComposition, HUDensity, eneProb, vSAD, 1, 10)
+a = cudaProtonMonteCarlo(finalDose, tempSumDose, tempLET, './mc_config', beamParam, sourcePos, bmdir, ctdata, corner, resolution, dims, isocenter, materialComposition, HUDensity, eneProb, vSAD, 1, 1)
 end = time.time()
 print(end - start)
+IDD = np.sum(finalDose, axis=2)
+IDD = np.sum(IDD, axis=0)
+x = np.arange(len(IDD))
+plt.plot(x, IDD)
+plt.show()
 a =1 
