@@ -1,0 +1,10 @@
+// directory for macro cross section:
+./models/mc/proton/mcpro_G4.imfp
+// directory for mass stopping power ratio:
+./models/mc/proton/mcpro.mater
+// directory for restricted stopping power in water:
+./models/mc/proton/mcpro.rstpw
+
+
+
+

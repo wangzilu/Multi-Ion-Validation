@@ -1,0 +1,5 @@
+outs:
+- md5: 1ebd61bfdbabc1361efa1fc6707e2f1f.dir
+  size: 496003799
+  nfiles: 4
+  path: nnunet

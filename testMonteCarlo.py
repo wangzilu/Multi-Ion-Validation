@@ -5,8 +5,10 @@ import numpy as np
 import time
 print(os.getcwd())
 from protonMC_CUDA import cudaProtonMonteCarlo
+from carbonMC import carbonMonteCarlo
+
 beamParam         = np.load('./input/beamsparam.npy')
-beamParam[0][0]   = 1
+beamParam[0][0]   = 100000
 beamParam[0][4:9] = 0
 beamParam[0][3]   = 4800
 
@@ -38,11 +40,28 @@ eneProb             = np.load('./input/eneProb.npy')
 finalDose   = np.zeros(dims, dtype=np.float32, order="F")
 tempSumDose = np.zeros((dims[0] * dims[1] * dims[2] * 3), dtype=np.float32)
 tempLET     = np.zeros((dims[0] * dims[1] * dims[2] * 4), dtype=np.float32)
+
+spotDose    = np.zeros(dims, dtype=np.float32, order="F")
+spotInd     = np.zeros(dims, dtype=np.uint32, order="F")
+
 vSAD        = 20.0
 start = time.time()
 a = cudaProtonMonteCarlo(finalDose, tempSumDose, tempLET, './mc_config', beamParam, sourcePos, bmdir, ctdata, corner, resolution, dims, isocenter, materialComposition, HUDensity, eneProb, vSAD, 1, 1)
 end = time.time()
 print(end - start)
+
+# maxUncertainty = carbonMonteCarlo(finalDose, spotDose, spotInd,
+#                                   './config.txt', calROIIndex,
+#                                   beamParam, sourcePos, vSAD, bmdir,
+#                                   ctdata,
+#                                   corner - 0.5 * resolution,
+#                                   resolution, dims,
+#                                   np.array(isocenter),
+#                                   materialComposition,
+#                                   HUDensity, eneProb, 70,
+#                                   0.00005, 0.5, 0, 1, 0,
+#                                   1, 0)
+
 IDD = np.sum(finalDose, axis=2)
 IDD = np.sum(IDD, axis=0)
 x = np.arange(len(IDD))

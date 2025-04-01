@@ -1,0 +1,25 @@
+//directory for CCYield:
+./models/mc/nuclear/CCYield_F.dat
+//directory for CCProduct:
+./models/mc/nuclear/CCProducts_F.bin
+//directory for CCaYield:
+./models/mc/nuclear/CCaYield_F.dat
+//directory for CCaProduct:
+./models/mc/nuclear/CCaProducts_F.bin
+//directory for CHYield:
+./models/mc/nuclear/CHYield_mod.dat
+//directory for CHProduct:
+./models/mc/nuclear/CHProducts.bin
+//directory for COYield:
+./models/mc/nuclear/COYield_mod.dat
+//directory for COProduct:
+./models/mc/nuclear/COProducts.bin
+// directory for macro cross section:
+./models/mc/carbonCS.txt
+// directory for mass stopping power ratio:
+./models/mc/carbonMSPR.txt
+// directory for restricted stopping power in water:
+./models/mc/carbonRSPW.txt
+// directory for density correction factor:
+./models/mc/densityCorrection.txt
+

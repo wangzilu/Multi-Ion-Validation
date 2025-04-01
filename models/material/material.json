@@ -1,0 +1,190 @@
+{
+    "Air": {
+        "elementComposition": [
+            7,
+            0.755,
+            8,
+            0.232,
+            18,
+            0.013
+        ],
+        "meanI": 85.7,
+        "density": 0.00121
+    },
+    "Lung": {
+        "elementComposition": [
+            1,
+            10.3,
+            6,
+            10.5,
+            7,
+            3.1,
+            8,
+            74.9,
+            11,
+            0.2,
+            15,
+            0.2,
+            16,
+            0.3,
+            17,
+            0.3,
+            19,
+            0.2
+        ],
+        "meanI": 75.3,
+        "density": 0.26
+    },
+    "Polyethylene": {
+        "name": "Polyethylene",
+        "elementComposition": [
+            1.0,
+            0.143711,
+            6.0,
+            0.856289
+        ],
+        "density": 0.94,
+        "meanI": 57.4
+    },
+    "PMMA": {
+        "name": "PMMA",
+        "elementComposition": [
+            1.0,
+            0.08,
+            6.0,
+            0.6,
+            8,
+            0.32
+        ],
+        "density": 1.19,
+        "meanI": 74
+    },
+    "Polycarbonate": {
+        "name": "Polycarbonate",
+        "elementComposition": [
+            1.0,
+            0.055,
+            6.0,
+            0.756,
+            8,
+            0.189
+        ],
+        "density": 1.2
+    },
+    "Adipose": {
+        "elementComposition": [
+            1,
+            11.4,
+            6,
+            59.8,
+            7,
+            0.7,
+            8,
+            27.8,
+            11,
+            0.1,
+            16,
+            0.1,
+            17,
+            0.1
+        ],
+        "meanI": 63.2,
+        "density": 0.95
+    },
+    "Water": {
+        "elementComposition": [
+            1,
+            0.11111111,
+            8,
+            0.88888888
+        ],
+        "meanI": 75,
+        "density": 1
+    },
+    "Muscle": {
+        "elementComposition": [
+            1,
+            10.2,
+            6,
+            14.3,
+            7,
+            3.4,
+            8,
+            71,
+            11,
+            0.1,
+            15,
+            0.2,
+            16,
+            0.3,
+            17,
+            0.1,
+            19,
+            0.4
+        ],
+        "meanI": 74.7,
+        "density": 1.05
+    },
+    "Cartilage": {
+        "elementComposition": [
+            1,
+            9.6,
+            6,
+            9.9,
+            7,
+            2.2,
+            8,
+            74.4,
+            11,
+            0.5,
+            15,
+            2.2,
+            16,
+            0.9,
+            17,
+            0.3
+        ],
+        "meanI": 75,
+        "density": 1.1
+    },
+    "Bone": {
+        "elementComposition": [
+            1,
+            4.7234,
+            6,
+            14.433,
+            7,
+            4.199,
+            8,
+            44.6096,
+            12,
+            0.22,
+            15,
+            10.497,
+            16,
+            0.315,
+            20,
+            20.993,
+            30,
+            0.01
+        ],
+        "meanI": 106.4,
+        "density": 1.85
+    },
+    "Al": {
+        "elementComposition": [
+            13,
+            1
+        ],
+        "meanI": 166,
+        "density": 2.7
+    },
+    "Fe": {
+        "elementComposition": [
+            26,
+            1
+        ],
+        "meanI": 286,
+        "density": 7.87
+    }
+}
