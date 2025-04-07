@@ -8,7 +8,7 @@ from protonMC_CUDA import cudaProtonMonteCarlo
 from carbonMC import carbonMonteCarlo
 
 beamParam         = np.load('./input/beamsparam.npy')
-beamParam[0][0]   = 1000000
+beamParam[0][0]   = 10000000
 beamParam[0][4:9] = 0
 beamParam[0][3]   = 4800
 
